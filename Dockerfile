@@ -4,9 +4,9 @@ RUN apk update \
     && apk add lighttpd \
     && rm -rf /var/cache/apk/*
 
-ADD index.html /var/www/localhost/index.html
-ADD css /var/www/localhost/css
-ADD img /var/www/localhost/img
+ADD index.html /var/www/localhost/htdocs/index.html
+ADD css /var/www/localhost/htdocs/css
+ADD img /var/www/localhost/htdocs/img
 
 EXPOSE 80
 
