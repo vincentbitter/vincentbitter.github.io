@@ -1,47 +1,90 @@
-html {
-    background: #efefef url(/img/bg.gif) repeat;
-    font-family: Verdana, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    min-width: 400px;
+    min-height: 500px;
 }
 
 body {
-    padding-top: 1em;
+    background-color: #222;
+}
+
+div.header {
+    position: relative;
+    background-color: #fff;
+    height: 50%;
+}
+
+div.header h1 {
+    position: absolute;
+    display: block;
     margin: 0;
-    padding: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+
+div.header h1 img {
+    display: block;
+    width: 400px;
+    max-width: 75%;
+    margin: 0 auto;
+    transform: translate(0, 50%);
 }
 
 div.content {
-    position: absolute;
-    top: 20%;
-    width: 100%;
+    margin-top: 200px;
+    padding: 25px;
+}
+
+ul.socialmedia {
+    text-align: center;
+    display: block;
     margin: 0;
     padding: 0;
 }
 
-h1 { 
+ul.socialmedia li {
+    display: inline-block;
     margin: 0;
     padding: 0;
-    font-size: 40pt;
-    font-weight: normal;
-    text-align: center;
 }
 
-h2 {
-    margin: 0 0 0 65px;
-    padding: 0;
-    font-size: 13pt;
-    font-weight: normal;
-    text-align: center;
+ul.socialmedia li + li {
+    margin-left: 10px;
 }
 
-div.socialmedia {
-    margin-top: 40px;
-    text-align: center;
-}
-
-div.socialmedia img {
+ul.socialmedia img {
     width: 48px;
     border: none;
+}
+
+@media only screen and (max-width: 350px) {
+    div.header {
+        position: static;
+        height: auto;
+    }
+
+    div.header h1 {
+        position: static;
+    }
+    
+    ul.socialmedia {
+        position: static;
+        margin-bottom: 25%;
+    }
+    
+    ul.socialmedia li {
+        display: block;
+    }
+
+    ul.socialmedia li + li {
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    ul.socialmedia img {
+        width: 50%;
+        border: none;
+    }
 }
