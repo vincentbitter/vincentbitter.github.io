@@ -11,4 +11,7 @@ ADD lighttpd.conf /etc/lighttpd/lighttpd.conf
 
 EXPOSE 80
 
+RUN chmod a+w /dev/stderr
+RUN chmod a+w /dev/stdout
+
 CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf", "2>&1"]
